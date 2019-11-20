@@ -8,24 +8,31 @@ void print(int *a, int n);
 //Main Function
 int main()
 {
-
+//Declare Variables
 int i, j, first, last, n;
 
+//Prompt to enter the value of n + Read
 printf("Enter the value of n: \n");
 scanf("%d", &n);
 
+//Now, Declare an Array
 int a[n];
 
+//Prompt to Enter the Elements of n and Read the Elements
 printf("Enter the Elements of n: \n");
 for (i = 0; i < n; i++)
 {
 scanf("%d", &a[i]);
 }
 
+//Call Merge Function
 merge_sort(a, 0, n - 1);
+
+//Call Print Function
 print(a, n);
 }
 
+//Merge_Sort Definition
 void merge_sort(int *a, int first, int last)
 {
 if (first < last)
@@ -37,6 +44,7 @@ merge(a, first, mid, last);
 }
 }
 
+//Merge Function Definition
 void merge(int *a, int first, int mid, int last)
 {
 int l_size = mid - first + 1;
@@ -71,6 +79,7 @@ else
 a[k++] = RA[j++];
 }
 }
+
 //Copy Remaining bytes
 while(i < l_size)
 {
@@ -81,6 +90,7 @@ while(j < r_size)
 a[k++] = RA[j++];
 }
 }
+
 //Print
 void print(int *a, int n)
 {
