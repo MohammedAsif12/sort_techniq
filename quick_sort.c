@@ -1,15 +1,20 @@
 #include <stdio.h>
+#include <time.h>
+
 
 //Prototypes
 int partition(int *a, int first, int last);
 void swap(int *a, int *b);
 void print_quick(int *a, int n);
 
+
 //Quick_ sort Definition
 void quick_sort(int *a, int first, int last)
 {
+
 if (first < last)
 {
+
 //Call partition function
 int partition_index = partition(a, first, last);
 
@@ -54,13 +59,15 @@ int temp = *a;
 *b = temp;
 }
 
+
 //Print
 void print_quick(int *a, int n)
 {
 int i = 0;
-while (i <= n)
+while (i < n)
 {
 printf("%d--", a[i]);
 i++;
 }
 }
+

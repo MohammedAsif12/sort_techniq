@@ -1,12 +1,16 @@
 #include <stdio.h>
+#include <time.h>
+
 
 //Prototypes
 void merge(int *a, int first, int mid, int last);
 void print_merge(int *a, int n);
 
+
 //Merge_Sort Definition
 void merge_sort(int *a, int first, int last)
 {
+
 if (first < last)
 {
 int mid = (first + last) >> 1;
@@ -63,6 +67,7 @@ a[k++] = RA[j++];
 }
 }
 
+
 //Print Elements
 void print_merge(int *a, int n)
 {
@@ -72,4 +77,5 @@ while (i < n)
 printf("%d--", a[i]);
 i++;
 }
+
 }
