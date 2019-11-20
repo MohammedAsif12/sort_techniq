@@ -1,36 +1,8 @@
 #include <stdio.h>
 
 //Prototypes
-void merge_sort(int *a, int first, int last);
 void merge(int *a, int first, int mid, int last);
-void print(int *a, int n);
-
-//Main Function
-int main()
-{
-//Declare Variables
-int i, j, first, last, n;
-
-//Prompt to enter the value of n + Read
-printf("Enter the value of n: \n");
-scanf("%d", &n);
-
-//Now, Declare an Array
-int a[n];
-
-//Prompt to Enter the Elements of n and Read the Elements
-printf("Enter the Elements of n: \n");
-for (i = 0; i < n; i++)
-{
-scanf("%d", &a[i]);
-}
-
-//Call Merge Function
-merge_sort(a, 0, n - 1);
-
-//Call Print Function
-print(a, n);
-}
+void print_merge(int *a, int n);
 
 //Merge_Sort Definition
 void merge_sort(int *a, int first, int last)
@@ -91,8 +63,8 @@ a[k++] = RA[j++];
 }
 }
 
-//Print
-void print(int *a, int n)
+//Print Elements
+void print_merge(int *a, int n)
 {
 int i = 0;
 while (i < n)
